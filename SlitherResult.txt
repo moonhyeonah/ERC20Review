@@ -1,0 +1,31 @@
+Contract Coin
+== ERC20 functions definition ==
+[✓] transfer (address, uint256) -> (bool)
+[✓] approve (address, uint256) -> (bool)
+[✓] transferFrom (address, address, uint256) -> (bool)
+[✓] allowance (address, address) -> (uint256)
+[✓] balanceOf (address) -> (uint256)
+
+== Custom modifiers ==
+[x] transfer modified by canTransfer(address)
+[x] transferFrom modified by canTransfer(address)
+
+== ERC20 events ==
+[✓] Transfer (address, address, uint256)
+[✓] Approval (address, address, uint256)
+[x] transfer must emit Transfer (address, address, uint256)
+[✓] approve must emit Approval (address, address, uint256)
+[x] transferFrom must emit Transfer (address, address, uint256)
+
+== ERC20 getters ==
+[✓] totalSupply () -> (uint256)
+[x] decimals () -> (uint8)
+[✓] symbol () -> (string)
+[✓] name () -> (string)
+
+== Allowance frontrunning mitigation ==
+[x] increaseAllowance (address, uint256) -> (bool)
+[x] decreaseAllowance (address, uint256) -> (bool)
+
+== Balance check in approve function ==
+[✓] approve function should not check for sender's balance
