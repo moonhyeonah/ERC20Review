@@ -339,7 +339,7 @@ token_dir = current_dir + "\\" + file_path
 chk_slither_report()
 
 # Step 2
-# run_functional_spec()
+run_functional_spec()
 fail_fs_set, fs_str = chk_functional_spec()
 print_result_fs(fail_fs_set)
 # print(fs_str)
